@@ -7,6 +7,8 @@ requires = [
     "pyramid>=1.5dev",
     "pyramid_tm",
     "pyramid_mako",
+    "pyramid_deform",
+    "pyramid_layout",
 ]
 
 tests_require = [
@@ -26,5 +28,8 @@ setup(name="bookmatch.web.store",
       namespace_packages=["bookmatch", "bookmatch.web"],
       install_requires=requires,
       tests_require=tests_require,
+      extras_require={
+          "testing": tests_require,
+      },
       entry_points=points,
       )
